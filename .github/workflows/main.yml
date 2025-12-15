@@ -15,5 +15,6 @@ jobs:
       - name: Run API Tests
         run: |
           newman run Safebank.postman_collection.json \
+          -e Safebank.postman_environment.json \
           --env-var API_KEY=${{ secrets.API_KEY }} \
           --env-var CLIENT_SECRET=${{ secrets.CLIENT_SECRET }}
